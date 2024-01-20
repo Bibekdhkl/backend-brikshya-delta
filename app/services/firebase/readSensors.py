@@ -14,4 +14,6 @@ def get_sensor_data():
     # db.reference() is used to get the data returns string of the getting info.
     sensor_data = db.reference("/test").get()
 
+    
+    
     return sensor_data
