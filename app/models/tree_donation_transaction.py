@@ -51,7 +51,7 @@ class TreeDonationStatus(models.Model):
 @receiver(post_save, sender=TreeAcceptTransaction)
 def create_tree_donation_status(sender, instance, created, **kwargs):
     if created:
-        TreeDonationStatus.objects.create(tree_accept_id=instance, status="started", comments="", image_path="/media/default.png")
+        TreeDonationStatus.objects.create(tree_accept_id=instance, status="started", comments="", image_path="")
 
         # Set the status of the corresponding TreeDonationTransaction instance to "true"
         tree_donation_transaction = instance.tree_trans_id
